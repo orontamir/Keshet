@@ -1,0 +1,19 @@
+.table-container {
+    overflow-x: auto; 
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  thead {
+    background-color: #e0e0e0;
+  }
+  
+  th, td {
+    text-align: right;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }

@@ -1,0 +1,21 @@
+<div>
+    <button (click)="toggleView()">
+        Toggle View (Current: {{ viewMode }})
+      </button>
+    <input type="text"
+           placeholder="Search ..."
+           (input)="onSearchChange($any($event.target).value)" />
+  
+    <input type="date"
+             (change)="onDateChange($any($event.target).value)" />
+  </div>
+  
+  <div>
+    <ng-container *ngIf="viewMode === 'list'">
+      <app-invoice-list [invoices]="filteredInvoices"></app-invoice-list>
+    </ng-container>
+    <ng-container *ngIf="viewMode === 'preview'">
+      <app-invoice-preview [invoices]="filteredInvoices"></app-invoice-preview>
+    </ng-container>
+  </div>
+  

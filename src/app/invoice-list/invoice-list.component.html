@@ -1,0 +1,21 @@
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>תאריך</th>
+          <th>עלות</th>
+          <th>ספק</th>
+          <th>תאור תעודה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of invoices" (click)="navigateToDetail(row.id)">
+          <td>{{ row.date | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ row.cost }} ₪</td>
+          <td>{{ row.supplier }}</td>
+          <td>{{ row.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
